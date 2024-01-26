@@ -4,6 +4,7 @@ import ListClient from './Exercice1/Composants/ListItems'
 import UpdateItems from './Exercice1/Composants/UpdateItems'
 import AddItems from './Exercice1/Composants/AddItems'
 import RechercherItems from './Exercice1/Composants/RechercherItems'
+import Details from './Exercice1/Composants/Details'
 
 export default function AppRx() {
   return (
@@ -12,6 +13,7 @@ export default function AppRx() {
             <Route path='/' element={<ListClient />} />
             <Route path="/update/:id" element={<UpdateItems />} />
             <Route path='/add' element={<AddItems />} />
+            <Route path='/details-Airpods' element={<Details />} />
             <Route path='/Recherche' element={<RechercherItems />} />
         </Routes>
     </BrowserRouter>
