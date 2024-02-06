@@ -11,6 +11,8 @@ import { legacy_createStore } from "redux";
 import RedContact from "./Contact/Store";
 import Appusers from "./Appusers";
 import Mareducer from "./Projet/Reducer";
+import Fullapp from "./Fullapp";
+import AppAnilist from "./AppAnilist";
 //import AppRx from './AppRx';
 //import Re from './Exercice1/Reducer';
 
@@ -19,7 +21,7 @@ import Mareducer from "./Projet/Reducer";
 
 //const store = legacy_createStore(Re)
 
-const store5 = legacy_createStore(Mareducer)
+//const store5 = legacy_createStore(Mareducer)
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   /*   <React.StrictMode>
@@ -37,13 +39,18 @@ root.render(
 </Provider>
  */
 
- /*  <BrowserRouter>
+/*    <BrowserRouter>
     <Provider store={str} >
       <AppContatc />
     </Provider>
-  </BrowserRouter> */
+  </BrowserRouter>  */
 
-  <Provider store={store5}>
+ /*  <Provider store={store5}>
     <Appusers />
-  </Provider>
+  </Provider> */
+
+  //<Fullapp />
+
+  <AppAnilist />
+
 );
