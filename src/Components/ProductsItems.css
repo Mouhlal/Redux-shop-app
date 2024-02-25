@@ -1,3 +1,35 @@
-#abc{
-    display: flex;
+.all {
+  position: relative;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(104, 104, 104);
+}
+.all-card {
+  border: none;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 15px;
+  text-align: center;
+  width: 18rem;
+  height: 30rem;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.image-card {
+  width: 225px;
+  height: 215px;
+}
+.name-btn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.card-price {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }

@@ -1,10 +1,11 @@
 import React from "react";
+import "../Components/ProductsItems.css";
 
-export default function ProductsItems({addtocart}) {
+export default function ProductsItems({ addtocart }) {
   const products = [
     {
       id: 1,
-      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      title: "Fjallraven - Foldsack No. 1 Backpack",
       price: 109.95,
       category: "men's clothing",
       img: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
@@ -16,7 +17,7 @@ export default function ProductsItems({addtocart}) {
       category: "men's clothing",
       img: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
     },
-    {   
+    {
       id: 3,
       title: "Mens Cotton Jacket",
       price: 55.99,
@@ -60,21 +61,25 @@ export default function ProductsItems({addtocart}) {
     },
   ];
   return (
-        <div className="col-md-4 mb-2 pt-3 m-4 ">
-          {products.map((pro , index) => (
-            <div className="card pt-3" style={{ width: "18rem"}} key={index}>
-              <img src={pro.img} className="card-img-top" style={{width:"222px",height:"211px"}}/>
-              <div className="card-body">
-                <h5 className="card-title"> {pro.title} </h5>
-                <p className="card-price"> {pro.price} $ </p>
-                <button 
-                onClick={()=>addtocart(pro)}
-                className="btn btn-primary">
-                <i className="bi bi-cart-plus-fill"></i>    Add to Cart
-                </button>
-              </div>
-            </div>
-          ))}
+    <div className="all">
+      {products.map((pro, index) => (
+        <div className="all-card" key={index}>
+          <img src={pro.img} className="image-card" />
+          <div className="card-body">
+            <br />
+            <h5 className="card-title"> {pro.title} </h5> <br />
+            <p className="card-price"> {pro.price} $ </p>
+            <button
+              onClick={() => addtocart(pro)}
+              className="btn btn-danger"
+              id="lala"
+            >
+              <i className="bi bi-cart-plus-fill"></i>
+              <span className="name-btn"> Add to Cart</span>
+            </button>
+          </div>
         </div>
+      ))}
+    </div>
   );
 }
